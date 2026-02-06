@@ -1,0 +1,986 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+
+    --gray: #f1f5f9;
+    --grey:#F2F2F2;
+    --dark: #0f172a;
+    --white: #ffffff;
+    --radius: 12px;
+}
+
+/*---------- header section-------------- */
+
+.head{
+  display: flex;
+  flex-direction:row;
+  top:0;
+  position: sticky;
+  width: 100%;
+  padding:10px;
+  align-items: center;
+  justify-content:space-around;
+  height:100px;
+  position:sticky;
+  z-index: 10;
+  background-color: var(--white);
+}
+
+.head nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+}
+.head nav ul li{
+  display: inline-block,
+
+}
+.head nav ul li:after{
+  display: block;
+  height: 3px;
+  margin: auto;
+  width:0;
+  content: "";
+  background-color: transparent;
+  transition: all 0.5s ease;
+}
+.head nav ul li:hover:after{
+  width:100%;
+  background-color: red;
+}
+
+.head nav ul li.active {
+  width:100%;
+  border-bottom: 3px solid red;
+}
+.head nav ul li a{
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+  color:black;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo{
+  color:blue;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .head{
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+    height:100px;
+  position:sticky;
+  background-color: var(--white);
+}
+
+
+}
+
+@media only screen and (max-width: 420px) {
+
+  .head nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+}
+
+    .head{
+  display: flex;
+  flex-direction:column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+    height:220px;
+  position:sticky;
+  background-color: var(--white);
+}
+
+ .head nav ul li{
+  display: block,
+
+}
+
+
+}
+
+ /* ---------header section end----------- */
+
+
+  /* ---------footer section ----------- */
+
+  footer{
+    background-color:var(--dark) ;
+    padding: 10px;
+  }
+
+    .footer-section{
+     display:flex;
+     flex-direction:row;
+     justify-content: space-around;
+    }
+
+  .footer-section p{
+    color:white;
+    font-size:20px;
+  }
+
+    .footer-section .links{
+       display:flex;
+       flex-direction: row;
+       gap:10px;
+    }
+
+   .footer-section .links div a{
+     text-decoration: none;
+     color:white;
+     font-size: 20px;
+   }
+
+
+
+@media only screen and (max-width: 900px) {
+  .footer-section{
+  display: flex;
+  font-size:18px;
+  flex-direction:column;
+  gap: 10px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  .footer-section p{
+
+    text-align: center;
+  }
+
+
+}
+
+
+@media only screen and (max-width: 420px) {
+
+     .footer-section .links{
+       display:flex;
+       flex-direction: column;
+       gap:10px;
+    }
+}
+
+   /* ---------footer section end----------- */
+
+
+ /* home page*/
+
+ /*.......... main Section............... */
+
+ main{
+   display: flex ;
+   flex-direction: column;
+  justify-content: center;
+   margin-top: 10px;
+   width:100%;
+
+ }
+.main-section{
+   display: flex ;
+   flex-direction: column;
+  justify-content: center;
+     align-items: center;
+      width:100vw;
+
+   margin-top: 10px;
+  background-color: var(--gray);
+}
+
+
+ /*----- Hero Sectiom----- */
+
+ .heroPage{
+   display: flex ;
+   flex-direction: row;
+   padding:10px;
+   width: 100%;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   justify-content:space-around;
+   align-items: center;
+ }
+
+ .findJob{
+    display: flex ;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+ }
+
+ .findJob h2{
+   font-size: 35px;
+     margin-top:10px;
+     margin-bottom: 10px;
+ }
+
+ .findJob p{
+    margin-top:10px;
+    font-size: 20px;
+     margin-bottom: 10px;
+     color: #525252;
+ }
+
+ .findJob .btn{
+   padding: 10px;
+   font-weight: bold;
+   font-size: 17px;
+   background-color: blue;
+   color:white;
+   margin-top: 10px;
+   border:none;
+   border-radius: 5px;
+   outline: none;
+ }
+
+ .jobCta{
+   display:flex;
+   flex-direction: column;
+   gap:13px;
+ }
+
+
+ .jobCta p{
+   font-size: 18px;
+   margin-bottom: 3px;
+   font-weight: bold;
+ }
+
+
+
+@media only screen and (max-width: 900px) {
+
+  .heroPage{
+   display: flex ;
+   flex-direction: column;
+   padding:10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   justify-content:center;
+   align-items: center;
+ }
+
+.findJob{
+  display: flex ;
+   flex-direction: column;
+   justify-content:center;
+   align-items: center;
+  text-align: center;
+}
+
+
+
+}
+
+ /* ------ hero section end ----- */
+
+ /* ----- job section-------- */
+
+ .jobSection{
+   background-color: var(--gray);
+   display:flex ;
+   gap:10px;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   padding-left: 80px;
+   width: 100%;
+   padding-right: 20px;
+ }
+
+ /* top companies section */
+
+ .topCompanies{
+   display:flex ;
+   flex-direction: column;
+   justify-content: space-around;
+   gap:10px;
+   padding-left: 30px;
+
+ }
+
+
+  .topCompanies h3{
+    font-size: 25px;
+    padding-top: 30px;
+  }
+ .company-name{
+   display: flex;
+   gap:30px;
+   margin-top: 10px;
+ }
+
+  .company-name div{
+   font-weight: bold;
+  font-size: 17px;
+   padding: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+ }
+
+ /* top companies section end */
+
+
+ /* job categories section*/
+
+
+ .jobCategories{
+     display:flex ;
+     flex-direction: column;
+     justify-content: space-around;
+     gap:10px;
+
+     padding: 30px;
+    }
+
+  .jobCategories h3{
+     font-size: 25px;
+
+  }
+
+   .jobCategories .jobRoles {
+     display: flex;
+     flex-direction: row;
+     padding-top:10px ;
+     gap: 20px;
+   }
+    .jobCategories .jobRoles div{
+      background-color: var(--white);
+      padding: 20px;
+      border:none;
+      border-radius: 7px;
+      box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+    }
+
+    .jobCategories .jobRoles div:last-child{
+      padding-left: 20px ;
+      padding-right: 80px;
+    }
+
+    .jobCategories .jobRoles div p {
+     font-weight: bold;
+     font-size: 20px;
+     padding: 5px 0;
+      }
+
+ .jobCategories .jobRoles div span{
+   font-size: 17px;
+ }
+
+ @media only screen and (max-width: 900px) {
+     .jobCategories .jobRoles {
+     display: flex;
+     width:100%;
+     flex-direction: column;
+     padding-top:10px ;
+     gap: 20px;
+   }
+
+  .company-name{
+   display: flex;
+   gap:20px;
+   margin-top: 10px;
+ }
+
+  .company-name div{
+   font-weight: bold;
+  font-size: 15px;
+   padding: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+ }
+
+
+ }
+
+
+  @media only screen and (max-width: 540px) {
+      .jobSection{
+   background-color: var(--gray);
+   display:flex ;
+   gap:10px;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   padding-left: 30px;
+   width: 100%;
+   padding-right: 10px;
+ }
+      .company-name{
+   display: flex;
+   flex-direction: column;
+   gap:15px;
+   margin-top: 10px;
+ }
+
+  .company-name div{
+   font-weight: bold;
+  font-size: 15px;
+  width:120px;
+   padding: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+ }
+       .jobCategories .jobRoles {
+     display: flex;
+     width:100%;
+     flex-direction: column;
+     padding-top:10px ;
+     gap: 20px;
+   }
+  }
+
+
+
+  /* job categories section end */
+
+  /* ----- job section end -------- */
+
+    /*-------- how it is works---- */
+
+
+  .how-Works{
+   display:flex ;
+   margin-top: 10px;
+   gap:10px;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   padding-left: 100px;
+  }
+
+  .how-Works h3{
+    font-size:25px;
+  }
+
+  .how-Works .works-details{
+   display: flex;
+     flex-direction: row;
+     padding-top:10px ;
+     gap: 20px;
+  }
+    .how-Works .works-details div{
+    background-color: var(--gray);
+      padding: 15px;
+      position:relative;
+      border:none;
+      border-radius: 7px;
+
+}
+
+   .how-Works .works-details div p{
+     font-weight: bold;
+     font-size: 20px;
+     padding: 5px 0;
+   }
+
+      .how-Works .works-details div span{
+         font-size: 18px;
+      }
+
+      .how-Works .works-details div .badge{
+        background-color: blue;
+        color:white;
+        width:25px;
+        height: 25px;
+        padding-left: 7px;
+        padding-top: 2px;
+        padding-bottom: 10px;
+        border-radius:100%;
+        position: absolute;
+        top:-7px;
+        left:-7px;
+      }
+
+    @media only screen and (max-width: 900px) {
+      .how-Works .works-details {
+     display: flex;
+     width:85%;
+     flex-direction: column;
+     padding-top:10px ;
+     gap: 20px;
+   }
+
+ }
+
+    /*-------- how it is works end ---- */
+
+
+/* ----- testimonials -------*/
+
+.testimonials{
+     display:flex ;
+   margin-top: 10px;
+   gap:10px;
+   flex-direction: column;
+   justify-content: space-around;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+   padding-left: 100px;
+
+}
+
+  .testimonials h3{
+        font-size:25px;
+  }
+
+
+ .testimonials .card{
+      display: flex;
+     flex-direction: row;
+     padding-top:10px ;
+     gap: 20px;
+
+ }
+
+
+ .testimonials .card div{
+     background-color: var(--white);
+      padding: 15px;
+      position:relative;
+      border:none;
+      border-radius: 7px;
+      box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+ }
+
+ .testimonials .card div p{
+   font-style: italic;
+   padding-bottom: 5px;
+
+ }
+
+.testimonials .card div span{
+  font-weight:bold;
+}
+
+@media only screen and (max-width: 900px) {
+
+ .testimonials .card {
+     display: flex;
+     width:85%;
+     flex-direction: column;
+     padding-top:10px ;
+     gap: 20px;
+   }
+
+ }
+
+ /* ----------main section end-----' */
+
+  /* --------- home page end ----------- */
+
+
+  /*................. auth page............. */
+
+
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    padding: 20px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+.login h3{
+  padding: 15px 0;
+  font-size: 22px;
+}
+
+.login form div {
+  margin-top: 5px;
+}
+
+.login form div input{
+  padding: 2px;
+}
+
+.login form .btn{
+    padding: 10px;
+   font-weight: bold;
+   font-size: 17px;
+   background-color: blue;
+   color:white;
+   margin-top: 10px;
+   border:none;
+   border-radius: 5px;
+  margin-bottom: 7px;
+   outline: none;
+}
+
+ /*................. auth page end.......*/
+ /*................. company page .......*/
+
+ .companyInfo{
+   width:80%;
+ }
+
+  .companyInfo h3{
+
+    font-size:22px;
+  }
+
+ .companyInfo h2{
+       font-size:24px;
+
+ }
+
+   .companyInfo p,span,li{
+
+    font-size:20px;
+  }
+
+
+#google{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+
+.aboutCompany{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+
+.companyDetails{
+   display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+
+.companyDetails ul{
+  padding-left:10px ;
+}
+.position{
+    display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+
+.position div {
+   padding: 5px 0;
+}
+
+.btn{
+    padding: 10px;
+   font-weight: bold;
+   font-size: 17px;
+   background-color: blue;
+   color:white;
+   margin-top: 10px;
+   border:none;
+   border-radius: 5px;
+   outline: none;
+}
+
+.btn a{
+  text-decoration: none;
+  color:white;
+}
+
+ /*................. company page end .......*/
+
+/*---------- job-details page---------*/
+
+
+.jobsDetails{
+  width:80%;
+}
+
+.jobsDetails h3{
+  font-size:22px;
+}
+
+.jobsDetails p,li{
+   font-size:19px;
+}
+
+.jobRole{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+
+.jobRole .btn{
+  padding: 10px;
+   font-weight: bold;
+   font-size: 17px;
+   background-color: blue;
+   cursor: pointer;
+   color:white;
+   width:120px;
+   margin-top: 10px;
+   border:none;
+   border-radius: 5px;
+   outline: none;
+
+}
+.jobRole .btn:hover{
+  background-color: darkblue;
+  color:gray;
+}
+
+.jobDes{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+
+.jobRes{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+
+.jobRes ul {
+  padding-left: 10px;
+}
+
+
+.jobReq ul {
+  padding-left: 10px;
+}
+
+
+.jobRes ul li {
+   padding: 3px 0;
+}
+.jobReq{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+.jobReq ul li {
+   padding: 3px 0;
+}
+
+.jobAbout{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+
+.jobAbout .btnn{
+    border: 1px solid blue;
+  padding: 5px 1px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px 0;
+  width:220px;
+  text-align: center;
+}
+
+.jobAbout .btnn a{
+  color:blue;
+  text-decoration: none;
+}
+
+.main-section h3{
+  padding-bottom: 7px ;
+}
+
+@media only screen and (max-width: 900px) {
+
+.jobAbout .btnn{
+    border: 1px solid blue;
+  padding: 5px 1px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin: 5px 0;
+  width:100%;
+  text-align: center;
+}
+
+
+ }
+
+
+/*---------- job-details page end---------*/
+
+
+/*---------- jobs page ---------*/
+
+.filterJobs{
+    display: flex;
+ width:65%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 0;
+  padding-left: 20px;
+  margin: 10px;
+  margin-top:15px;
+   background-color: var(--white);
+   border:none;
+   border-radius: 7px;
+box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+
+}
+
+.filterJobs .options{
+  padding: 10px 0;
+}
+
+.filterJobs .options span{
+  font-size:20px;
+}
+
+ .jobs{
+    display: flex;
+    width:65%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 0;
+    padding-left: 20px;
+    margin: 10px;
+    margin-top:15px;
+    background-color: var(--white);
+    border:none;
+    border-radius: 7px;
+    box-shadow:5px 7px 40px rgba(0,0,0,0.2);
+}
+
+
+.jobs p{
+  padding-top: 3px;
+}
+
+.jobs .btnn{
+     border: 1px solid blue;
+  padding: 7px 5px;
+  font-weight:bold;
+  border-radius: 5px;
+  margin: 5px 0;
+  background-color: blue;
+  width:120px;
+  text-align: center;
+
+}
+
+.jobs .btnn a{
+   color:var(--white);
+  text-decoration: none;
+  font-size:15px;
+}
+
+.pagination{
+  display:flex;
+  flex-direction: row;
+}
+
+.pagination div{
+  display:flex;
+  align-items: center;
+  padding: 15px 0;
+  flex-direction: row;
+}
+
+.pagination div p{
+     border: 2px solid blue;
+  padding: 7px;
+  cursor:pointer;
+  color:blue;
+  margin:0 7px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pagination div p a{
+
+  text-decoration: none;
+
+}
+
+/*---------- jobs page end ---------*/
